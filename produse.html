@@ -3,73 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produse - Carp Shop</title>
-    <link rel="stylesheet" href="#">
+    <title>Categorii Produse - CarpShop</title>
+    <link rel="stylesheet" href="produse.css">
 </head>
 <body>
     <header>
-    <nav class="navbar">
-        <div class="logo">Carp<span>Shop</span></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="produse.html">Produse</a></li>
-            <li><a href="contacte.html">Contacte</a></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Carp<span>Shop</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="produse.html" class="active">Produse</a></li>
+                <li><a href="contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="linkuri">
-        <li><a href="undite.html">Undite</a></li>
-        <li><a href="mulinete.html">Mulinete</a></li>
-    </section>
+    <main>
+        <section class="category-header">
+            <h1>Echipament de Pescuit</h1>
+            <p>Alege categoria potrivită pentru stilul tău de pescuit</p>
+        </section>
 
-    <section class="products-header">
-        <h1>Produse Recomandate</h1>
-        <p>Alege echipamentul potrivit pentru următoarea ta aventură.</p>
-    </section>
-
-    <main class="container">
-        <div class="product-grid">
-            
-            <div class="product-card">
-                <div class="badge">Nou</div>
-                <img src="#" alt="Lansetă">
-                <h3>Lansetă Carbon Pro</h3>
-                <p>Acțiune rapidă, 2.40m, ideală pentru șalău.</p>
-                <div class="price">320 lei</div>
-                <button class="btn-buy">Adaugă în coș</button>
+        <div class="categories-container">
+            <div class="category-card">
+                <div class="image-box">
+                    <img src="pictures/mulineta.jpg" alt="Mulinete">
+                </div>
+                <div class="category-info">
+                    <h3>Mulinete</h3>
+                    <p></p>
+                    <a href="mulinete.html" class="btn-category">Vezi Produse</a>
+                </div>
             </div>
 
-            <div class="product-card">
-                <img src="#" alt="Mulinetă">
-                <h3>Mulinetă Shimano X</h3>
-                <p>9+1 rulmenți, recuperare rapidă a firului.</p>
-                <div class="price">450 lei</div>
-                <button class="btn-buy">Adaugă în coș</button>
+            <div class="category-card">
+                <div class="image-box">
+                    <img src="pictures/lanseta.jpg" alt="Lansete">
+                </div>
+                <div class="category-info">
+                    <h3>Lansete</h3>
+                    <p></p>
+                    <a href="lansete.html" class="btn-category">Vezi Produse</a>
+                </div>
             </div>
 
-            <div class="product-card">
-                <img src="#" alt="Momeală">
-                <h3>Set Voblere Răpitor</h3>
-                <p>Pachet de 5 bucăți în culori atractive.</p>
-                <div class="price">85 lei</div>
-                <button class="btn-buy">Adaugă în coș</button>
+            <div class="category-card">
+                <div class="image-box">
+                    <img src="pictures/nadamomeli.webp" alt="Nada">
+                </div>
+                <div class="category-info">
+                    <h3>Nadă & Momeli</h3>
+                    <p></p>
+                    <a href="momeli.html" class="btn-category">Vezi Produse</a>
+                </div>
             </div>
 
-            <div class="product-card">
-                <img src="#" alt="Fir">
-                <h3>Fir Textil Spider</h3>
-                <p>Rezistență mare la nod, 150m, 0.16mm.</p>
-                <div class="price">110 lei</div>
-                <button class="btn-buy">Adaugă în coș</button>
+            <div class="category-card">
+                <div class="image-box">
+                    <img src="pictures/accesorii.avif" alt="Accesorii">
+                </div>
+                <div class="category-info">
+                    <h3>Accesorii</h3>
+                    <p></p>
+                    <a href="cat-accesorii.html" class="btn-category">Vezi Produse</a>
+                </div>
             </div>
 
+            <div class="category-card">
+                <div class="image-box">
+                    <img src="pictures/pluta.webp" alt="Plute">
+                </div>
+                <div class="category-info">
+                    <h3>Plute</h3>
+                    <p></p>
+                    <a href="cat-accesorii.html" class="btn-category">Vezi Produse</a>
+                </div>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Delta Shop. Toate drepturile rezervate.</p>
+        <p>&copy; 2026 CarpShop. Fir întins!</p>
     </footer>
-
 </body>
 </html>
