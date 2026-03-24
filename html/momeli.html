@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nadă și Momeli - CarpShop</title>
-    <link rel="stylesheet" href="momeli.css">
+    <link rel="stylesheet" href="../css/momeli.css">
 </head>
 <body>
 
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">Carp<span>Shop</span></a>
+                <a href="../index.html" style="text-decoration: none; color: inherit;">Carp<span>Shop</span></a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="produse.html">Produse</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
+                <li><a href="../index.html">Acasă</a></li>
+                <li><a href="../html/produse.html">Produse</a></li>
+                <li><a href="../html/contacte.html">Contacte</a></li>
+                <li><a href="../html/cos.html">Coș <span class="cart-badge">0</span></a></li>
             </ul>
         </nav>
     </header>
@@ -28,12 +29,15 @@
         </section>
 
         <div class="container">
+            <div class="filter-box">
+                 <input type="text" id="searchInput" placeholder="Caută produs...">
+            </div>
             <div class="product-grid">
 
                 <div class="product-card">
                     <div class="badge">Cel mai vândut</div>
                     <div class="product-image">
-                        <img src="pictures/Nadă Carp Spirit - Miere.jpg" alt="Nadă Crap">
+                        <img src="../pictures/Nadă Carp Spirit - Miere.jpg" alt="Nadă Crap">
                     </div>
                     <div class="product-info">
                         <h3>Nadă Carp Spirit - Miere</h3>
@@ -45,7 +49,7 @@
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="pictures/Pop-up-uri Capsuni 15mm.webp" alt="Pop-ups">
+                        <img src="../pictures/Pop-up-uri Capsuni 15mm.webp" alt="Pop-ups">
                     </div>
                     <div class="product-info">
                         <h3>Pop-up-uri Capsuni 15mm</h3>
@@ -58,7 +62,7 @@
                 <div class="product-card">
                     <div class="badge">Nou</div>
                     <div class="product-image">
-                        <img src="pictures/Peleți Halibut 8mm.webp" alt="Peleți">
+                        <img src="../pictures/Peleți Halibut 8mm.webp" alt="Peleți">
                     </div>
                     <div class="product-info">
                         <h3>Peleți Halibut 8mm</h3>
@@ -70,7 +74,7 @@
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="pictures/Atractant Lichid Krill.jpg" alt="Atractant">
+                        <img src="../pictures/Atractant Lichid Krill.jpg" alt="Atractant">
                     </div>
                     <div class="product-info">
                         <h3>Atractant Lichid Krill</h3>
@@ -88,5 +92,19 @@
         <p>&copy; 2026 CarpShop. Fir întins!</p>
     </footer>
 
+    <script src="../js/app.js"></script>
+    <script>
+document.getElementById("searchInput").addEventListener("input", function() {
+  const value = this.value.toLowerCase();
+  document.querySelectorAll(".product-card").forEach(card => {
+    const name = card.querySelector("h3").innerText.toLowerCase();
+    if (name.includes(value)) {
+      card.style.display = "flex";   // păstrează dimensiunea corectă
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+</script>
 </body>
 </html>

@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lansete - CarpShop</title>
-    <link rel="stylesheet" href="lansete.css">
+    <link rel="stylesheet" href="../css/lansete.css">
 </head>
 <body>
 
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">Carp<span>Shop</span></a>
+                <a href="../index.html" style="text-decoration: none; color: inherit;">Carp<span>Shop</span></a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="produse.html">Produse</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
+                <li><a href="../index.html">Acasă</a></li>
+                <li><a href="../html/produse.html">Produse</a></li>
+                <li><a href="../html/contacte.html">Contacte</a></li>
+                <li><a href="../html/cos.html">Coș <span class="cart-badge">0</span></a></li>
             </ul>
         </nav>
     </header>
@@ -28,12 +29,15 @@
         </section>
 
         <div class="container">
+            <div class="filter-box">
+                 <input type="text" id="searchInput" placeholder="Caută produs...">
+            </div>
             <div class="product-grid">
 
                 <div class="product-card">
                     <div class="badge">Top Vânzări</div>
                     <div class="product-image">
-                        <img src="pictures/Shimano Tribal TX-2.webp" alt="Lansetă Crap">
+                        <img src="../pictures/Shimano Tribal TX-2.webp" alt="Lansetă Crap">
                     </div>
                     <div class="product-info">
                         <h3>Shimano Tribal TX-2</h3>
@@ -45,7 +49,7 @@
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="pictures/Daiwa Ninja Spinning.jpg" alt="Lansetă Spinning">
+                        <img src="../pictures/Daiwa Ninja Spinning.jpg" alt="Lansetă Spinning">
                     </div>
                     <div class="product-info">
                         <h3>Daiwa Ninja Spinning</h3>
@@ -58,7 +62,7 @@
                 <div class="product-card">
                     <div class="badge">Nou</div>
                     <div class="product-image">
-                        <img src="pictures/Okuma G-Force Tele.webp" alt="Undiță Telescopică">
+                        <img src="../pictures/Okuma G-Force Tele.webp" alt="Undiță Telescopică">
                     </div>
                     <div class="product-info">
                         <h3>Okuma G-Force Tele</h3>
@@ -70,7 +74,7 @@
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="pictures/Tica Feedback Feeder.webp" alt="Lansetă Feeder">
+                        <img src="../pictures/Tica Feedback Feeder.webp" alt="Lansetă Feeder">
                     </div>
                     <div class="product-info">
                         <h3>Tica Feedback Feeder</h3>
@@ -88,5 +92,19 @@
         <p>&copy; 2026 CarpShop. Fir întins!</p>
     </footer>
 
+    <script src="../js/app.js"></script>
+    <script>
+document.getElementById("searchInput").addEventListener("input", function() {
+  const value = this.value.toLowerCase();
+  document.querySelectorAll(".product-card").forEach(card => {
+    const name = card.querySelector("h3").innerText.toLowerCase();
+    if (name.includes(value)) {
+      card.style.display = "flex";   // păstrează dimensiunea corectă
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+</script>
 </body>
 </html>
