@@ -2,6 +2,10 @@ body {
     background-color:#f4f4f4;
     margin: 0;
     font-family: sans-serif;
+    /* --- Liniile noi pentru footer --- */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 .navbar {
@@ -176,4 +180,20 @@ body {
 
 .btn-buy:hover {
     background-color: #20b9e7;
+}
+
+/* --- FORTARE FOOTER LA BAZA --- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto; /* Aceasta este comanda magica: impinge footer-ul cat mai jos posibil */
+    background-color: #0a1f44;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
 }

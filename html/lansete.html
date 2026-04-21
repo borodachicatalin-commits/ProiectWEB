@@ -33,57 +33,6 @@
                  <input type="text" id="searchInput" placeholder="Caută produs...">
             </div>
             <div class="product-grid">
-
-                <div class="product-card">
-                    <div class="badge">Top Vânzări</div>
-                    <div class="product-image">
-                        <img src="../pictures/Shimano Tribal TX-2.webp" alt="Lansetă Crap">
-                    </div>
-                    <div class="product-info">
-                        <h3>Shimano Tribal TX-2</h3>
-                        <p>Carbon XT60, 3.60m, acțiune rapidă, ideală pentru distanță.</p>
-                        <div class="product-price">540 lei</div>
-                        <button class="btn-buy">Adaugă în coș</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="../pictures/Daiwa Ninja Spinning.jpg" alt="Lansetă Spinning">
-                    </div>
-                    <div class="product-info">
-                        <h3>Daiwa Ninja Spinning</h3>
-                        <p>Ultra-ușoară, inele Titanium Oxide, senzitivitate maximă.</p>
-                        <div class="product-price">280 lei</div>
-                        <button class="btn-buy">Adaugă în coș</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="badge">Nou</div>
-                    <div class="product-image">
-                        <img src="../pictures/Okuma G-Force Tele.webp" alt="Undiță Telescopică">
-                    </div>
-                    <div class="product-info">
-                        <h3>Okuma G-Force Tele</h3>
-                        <p>Telescopică, 2.70m, ușor de transportat, versatilă.</p>
-                        <div class="product-price">145 lei</div>
-                        <button class="btn-buy">Adaugă în coș</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="../pictures/Tica Feedback Feeder.webp" alt="Lansetă Feeder">
-                    </div>
-                    <div class="product-info">
-                        <h3>Tica Feedback Feeder</h3>
-                        <p>3 vârfuri interschimbabile, mâner plută, putere 100g.</p>
-                        <div class="product-price">390 lei</div>
-                        <button class="btn-buy">Adaugă în coș</button>
-                    </div>
-                </div>
-
             </div>
         </div>
     </main>
@@ -93,13 +42,15 @@
     </footer>
 
     <script src="../js/app.js"></script>
-    <script>
+<script>
+incarcaProduse('lansete');
+
 document.getElementById("searchInput").addEventListener("input", function() {
   const value = this.value.toLowerCase();
   document.querySelectorAll(".product-card").forEach(card => {
     const name = card.querySelector("h3").innerText.toLowerCase();
     if (name.includes(value)) {
-      card.style.display = "flex";   // păstrează dimensiunea corectă
+      card.style.display = "flex";
     } else {
       card.style.display = "none";
     }

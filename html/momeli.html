@@ -33,57 +33,6 @@
                  <input type="text" id="searchInput" placeholder="Caută produs...">
             </div>
             <div class="product-grid">
-
-                <div class="product-card">
-                    <div class="badge">Cel mai vândut</div>
-                    <div class="product-image">
-                        <img src="../pictures/Nadă Carp Spirit - Miere.jpg" alt="Nadă Crap">
-                    </div>
-                    <div class="product-info">
-                        <h3>Nadă Carp Spirit - Miere</h3>
-                        <p>Mix granulație medie, aromă puternică de miere, 1kg.</p>
-                        <div class="product-price">22 lei</div>
-                        <button class="btn-buy">Adaugă în coș</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="../pictures/Pop-up-uri Capsuni 15mm.webp" alt="Pop-ups">
-                    </div>
-                    <div class="product-info">
-                        <h3>Pop-up-uri Capsuni 15mm</h3>
-                        <p>Flotabilitate ridicată, culoare vizibilă, atracție rapidă.</p>
-                        <div class="product-price">35 lei</div>
-                        <button class="btn-buy">Adaugă în coș</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="badge">Nou</div>
-                    <div class="product-image">
-                        <img src="../pictures/Peleți Halibut 8mm.webp" alt="Peleți">
-                    </div>
-                    <div class="product-info">
-                        <h3>Peleți Halibut 8mm</h3>
-                        <p>Conținut ridicat de făină de pește și uleiuri naturale.</p>
-                        <div class="product-price">18 lei</div>
-                        <button class="btn-buy">Adaugă în coș</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="../pictures/Atractant Lichid Krill.jpg" alt="Atractant">
-                    </div>
-                    <div class="product-info">
-                        <h3>Atractant Lichid Krill</h3>
-                        <p>PVA Friendly, stimulator de hrănire concentrat, 500ml.</p>
-                        <div class="product-price">45 lei</div>
-                        <button class="btn-buy">Adaugă în coș</button>
-                    </div>
-                </div>
-
             </div>
         </div>
     </main>
@@ -93,13 +42,15 @@
     </footer>
 
     <script src="../js/app.js"></script>
-    <script>
+<script>
+incarcaProduse('momeli');
+
 document.getElementById("searchInput").addEventListener("input", function() {
   const value = this.value.toLowerCase();
   document.querySelectorAll(".product-card").forEach(card => {
     const name = card.querySelector("h3").innerText.toLowerCase();
     if (name.includes(value)) {
-      card.style.display = "flex";   // păstrează dimensiunea corectă
+      card.style.display = "flex";
     } else {
       card.style.display = "none";
     }
